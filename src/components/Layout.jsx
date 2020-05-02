@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
 };
 
 const Container = styled.div`
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 50px auto;
