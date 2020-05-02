@@ -87,19 +87,21 @@ const StyledHomeText = styled.div`
 
 		h1 {
 			text-align: center;
-			font-size: 10vw;
-			line-height: 11vw;
+			font-size: 9vw;
+			line-height: 10vw;
 		}
 
 		h4 {
 			text-align: center;
-			font-size: 6vw;
-			line-height: 7vw;
+			font-size: 5vw;
+			line-height: 6vw;
 		}
 
 		p {
-			margin-top: 2rem;
+			margin-top: 1rem;
 			text-align: center;
+			font-size: 1rem;
+			line-height: 1.2rem;
 		}
 	}
 `;

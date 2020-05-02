@@ -47,7 +47,7 @@ const SubContainer = styled.div`
 	height: 70%;
 
 	@media only screen and (max-width: 1000px) {
-		width: 90%;
+		width: 80%;
 		height: 70%;
 	}
 `;
