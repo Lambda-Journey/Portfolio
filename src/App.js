@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import { Switch, Route } from "react-router-dom";
+
+import theme from './styles/theme';
+
+import Layout from './components/Layout';
+import GlobalStyles from './styles/GlobalStyles';
+
+import HomePage from "./pages/home";
+import ProjectsPage from "./pages/projects";
+import AboutPage from "./pages/about";
+import ResumePage from "./pages/resume";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<GlobalStyles />
+			<Layout>
+
+				<Switch>
+					<Route exact path="/" component={HomePage} />
+					<Route exact path="/projects" component={ProjectsPage} />
+					<Route exact path="/about" component={AboutPage} />
+					<Route exact path="/resume" component={ResumePage} />
+				</Switch>
+			</Layout>
+		</ThemeProvider>
+	);
 }
 
 export default App;
