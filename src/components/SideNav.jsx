@@ -21,17 +21,10 @@ const SideNav = () => {
 	);
 };
 
-const Container = styled.nav`
-	width: 100%;
-	height: 100%;
-	background-color: red;
-	grid-area: sidenav;
-`;
-
 const StyledSideNav = styled.nav`
-    display: grid;
-    grid-area: sidenav;
-    width: 100%;
+	display: grid;
+	grid-area: sidenav;
+	width: 100%;
 	height: 100%;
 	grid-template-columns: 50px;
 	grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
@@ -48,6 +41,24 @@ const StyledSideNav = styled.nav`
 	.link-container:nth-child(3) {
 		background-color: #0e1825;
 		grid-row: 4/5;
+	}
+
+	@media only screen and (max-width: 1000px) {
+		grid-template-rows: 50px;
+		grid-template-columns: 2fr 2fr 2fr;
+
+		.link-container:nth-child(1) {
+			grid-column: 1/2;
+			grid-row: 1/2;
+		}
+		.link-container:nth-child(2) {
+			grid-column: 2/3;
+			grid-row: 1/2;
+		}
+		.link-container:nth-child(3) {
+			grid-column: 3/4;
+			grid-row: 1/2;
+		}
 	}
 
 	.link-container {
@@ -80,6 +91,11 @@ const StyledSideNav = styled.nav`
 		text-transform: uppercase;
 		font-size: 16px;
 		font-weight: 300;
+
+		@media only screen and (max-width: 1000px) {
+			transform: rotate(0);
+			margin-bottom: 0;
+		}
 	}
 
 	.selected::after {

@@ -35,12 +35,21 @@ const Container = styled.section`
 		grid-column: 4/7;
 		align-self: end;
 		justify-self: end;
+
+		@media only screen and (max-width: 1000px) {
+			display: none;
+		}
 	}
 `;
 
 const SubContainer = styled.div`
 	width: 70%;
 	height: 70%;
+
+	@media only screen and (max-width: 1000px) {
+		width: 90%;
+		height: 70%;
+	}
 `;
 
 export default HomePage;

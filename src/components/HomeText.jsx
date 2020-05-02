@@ -1,30 +1,27 @@
-import React, { useRef, useEffect } from "react";
-import styled from "styled-components";
+import React, { useRef, useEffect } from 'react';
+import styled from 'styled-components';
 
 const HomeText = () => {
 	return (
 		<StyledHomeText className="home-page_text">
-				<h1>Sebastian</h1>
-				<h1>Garces</h1>
-				<h4>
-					Front End Developer <span>|</span> UI / UX Designer
-				</h4>
-				<p>"bridging the gap between developer and designer"</p>
-				<button>Hire Me</button>
+			<h1>Sebastian</h1>
+			<h1>Garces</h1>
+			<h4>
+				Front End Developer <span>|</span> UI / UX Designer
+			</h4>
+			<p>"bridging the gap between developer and designer"</p>
+			<button>Hire Me</button>
 		</StyledHomeText>
 	);
 };
 
 const StyledHomeText = styled.div`
-	grid-row: 2/4;
-	grid-column: 3/4;
-	place-self: center;
-
 	h1:first-child {
 		margin: 0;
 	}
 
 	h1 {
+		width: fit-content;
 		font-family: Montserrat;
 		font-style: normal;
 		font-weight: bold;
@@ -33,7 +30,7 @@ const StyledHomeText = styled.div`
 		letter-spacing: 10px;
 		text-transform: uppercase;
 		color: transparent;
-		background: linear-gradient(106.8deg, #0057ff 0.44%, #00ff85 100%);
+		background: linear-gradient(107.9deg, #0057ff 0.44%, #00ff85 100%);
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 		-webkit-background-clip: text;
@@ -80,6 +77,29 @@ const StyledHomeText = styled.div`
 		&:hover {
 			background: linear-gradient(106.8deg, #0057ff 0.44%, #00ff85 100%);
 			transition: background 150ms ease-in-out;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h1 {
+			text-align: center;
+			font-size: 10vw;
+			line-height: 11vw;
+		}
+
+		h4 {
+			text-align: center;
+			font-size: 6vw;
+			line-height: 7vw;
+		}
+
+		p {
+			margin-top: 2rem;
+			text-align: center;
 		}
 	}
 `;

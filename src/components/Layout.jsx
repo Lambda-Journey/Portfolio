@@ -15,15 +15,24 @@ const Layout = ({ children }) => {
 };
 
 const Container = styled.div`
-    width: 100%;
+	width: 100%;
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 50px auto;
-    grid-template-rows: 100px auto;
-    
-    grid-template-areas: 
-     'sidenav topnav'
-     'sidenav ......'
+	grid-template-rows: 100px auto;
+
+	grid-template-areas:
+		'sidenav topnav'
+		'sidenav ......';
+
+	@media only screen and (max-width: 1000px) {
+		grid-template-columns: auto;
+		grid-template-rows: 75px auto 50px;
+		grid-template-areas:
+			'topnav'
+			'......'
+			'sidenav';
+	}
 `;
 
 export default Layout;

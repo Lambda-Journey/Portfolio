@@ -10,19 +10,21 @@ const EmpoweredConversations = () => {
 		<Container className="project">
 			<div className="project-left">
 				<EC />
-				<h3>
+				<h1>
 					Empowered <br />
 					Conversations
-				</h3>
+				</h1>
 				<span className="technologies">HTML | SCSS | JavaScript | GSAP</span>
 				<strong class="role">UI Developer / Designer</strong>
 				<p class="challenges">
-					<strong>Challenges:</strong>
+					<strong>Description:</strong>
 					<br />
-					Empowered Conversation presented unique challenges. It needed to feel friendly,
-					inviting, modern and interactive. This was achieved by selecting a color palatte
-					with warm and opaque tones, a round typeface like Questrial and the
-					incorporation of GSAP to bring smooth transitions to the page.
+					Empowered Conversations aims to re-envision the future of social support. With
+					our text-based tool, the person you want to have a “hard conversation” with will
+					be texted before the conversation with a heads-up so they can emotionally
+					prepare themselves. From sexual assault disclosure to coming out, transitioning,
+					grief and loss, we set the stage for relationships that are radically more
+					supportive and meaningful than you ever imagined they could be.
 				</p>
 				<div class="icon-container">
 					<a
@@ -59,19 +61,33 @@ const Container = styled.section`
 	max-width: 1440px;
 	margin: 0 auto;
 
+	@media only screen and (max-width: 1280px) {
+		padding: 0 10%;
+	}
+
 	.project-left {
-		width: 20%;
+		width: 100%;
 		padding: 3rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-		min-width: 550px;
+		min-width: 450px;
+
+		@media only screen and (max-width: 1280px) {
+			font-size: 0.9rem;
+			padding: 2rem;
+		}
 
 		h1 {
 			font-size: 40px;
 			letter-spacing: -2px;
 			font-weight: 600;
+
+			@media only screen and (max-width: 1280px) {
+				font-size: 28px;
+				letter-spacing: 0px;
+			}
 		}
 
 		.technologies,
@@ -85,6 +101,7 @@ const Container = styled.section`
 
 		.challenges {
 			color: #a5a5a5;
+			margin-top: 1rem;
 
 			strong {
 				color: white;
@@ -101,6 +118,11 @@ const Container = styled.section`
 
 	.project-right {
 		position: relative;
+		width: 100%;
+
+		@media only screen and (max-width: 1280px) {
+			width: fit-content;
+		}
 
 		.ec-mobile {
 			position: absolute;
