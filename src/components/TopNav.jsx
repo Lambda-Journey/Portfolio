@@ -30,14 +30,14 @@ const StyledTopNav = styled.nav`
 	display: grid;
 	grid-template-columns: 50px 0.75fr 2fr 2fr 0.75fr 50px;
 	grid-template-rows: 100%;
-    width: 100%;
-    
-    @media only screen and (max-width: 1000px) {
-        display: flex;
-        justify-content: space-between;
-        width: 100vw;
-        padding: 0 0 0 1rem;
-}
+	width: 100%;
+
+	@media only screen and (max-width: 1000px) {
+		display: flex;
+		justify-content: space-between;
+		width: 100vw;
+		padding: 0 0 0 1rem;
+	}
 `;
 
 const Logo = styled(NavLink)`
@@ -58,27 +58,32 @@ const Logo = styled(NavLink)`
 	grid-column: 2/3;
 	place-self: center;
 	font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    
-    @media only screen and (max-width: 1000px) {
+	font-weight: 500;
+
+	@media only screen and (max-width: 1000px) {
 		grid-column: 1/2;
 	}
 `;
 
 const Socials = styled.div`
-	grid-column: 5/6;
-	place-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-	svg {
-		opacity: 0.5;
-		margin: 0 1rem;
-    }
-    
-    @media only screen and (max-width: 1000px) {
-        grid-column: 3/4;
-        padding: 0;
-        margin: 0;
-        place-self: center;
+	a {
+		display: block;
+
+		svg {
+			opacity: 0.5;
+			margin: 0 1rem;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) {
+		grid-column: 3/4;
+		padding: 0;
+		margin: 0;
+		place-self: center;
 	}
 `;
 
